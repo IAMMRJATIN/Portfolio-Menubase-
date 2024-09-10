@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jatin Sharma (MenuBase - Portfolio)</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <section id="navigation">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='img/js.png') }}" alt="jatinSharma" height="30px"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Projects">PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#About">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <!-- Home -->
+  <section id="home">
+    <div class="container">
+
+      <h3>Hi, My name is... <span id="typed"></span> <br></h3>
+      <h1>JATIN SHARMA</h1>
+      <h6 style="color:rgba(255, 99, 99, 0.614)">i am a....</h6>
+      <p class="typed-text"></p>
+      <div class="social">
+        <a href="https://github.com/IAMMRJATIN"><i class="fa fa-github"></i></a>
+        <a href="http://www.linkedin.com/in/jatin-sharma-082713238"><i class="fa fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/jeminner_246/"><i class="fa fa-instagram"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="Projects">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      <div class="row">
+        <div class="col-md-4 project">
+          <div class="project-content">
+            <a href="{{ url_for('index1') }}">
+              <img src="{{ url_for('static', filename='img/pythonLogo.png') }}" alt="Project 1" class="project-image">
+              <h3 class="project-title">Python Projects</h3>
+              <p class="project-description">In this section you can see all the Python Projects created by me.</p>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 project">
+          <div class="project-content">
+            <img src="{{ url_for('static', filename='img/mlLogo.jpg') }}" alt="Project 2" class="project-image">
+            <h3 class="project-title">Machine Learning</h3>
+            <p class="project-description">Description of the second project goes here. Briefly explain what it is about.</p>
+          </div>
+        </div>
+        <div class="col-md-4 project">
+          <div class="project-content">
+            <img src="{{ url_for('static', filename='img/homebg.jpg') }}" alt="Project 3" class="project-image">
+            <h3 class="project-title">Project Three</h3>
+            <p class="project-description">Description of the third project goes here. Briefly explain what it is about.</p>
+          </div>
+        </div>
+
+        <!-- Add more projects as needed -->
+      </div>
+      <div class="row">
+        <div class="col-md-4 project">
+          <div class="project-content">
+            <img src="{{ url_for('static', filename='img/homebg.jpg') }}" alt="Project 1" class="project-image">
+            <h3 class="project-title">Project One</h3>
+            <p class="project-description">Description of the first project goes here. Briefly explain what it is about.</p>
+          </div>
+        </div>
+        <div class="col-md-4 project">
+          <div class="project-content">
+            <img src="{{ url_for('static', filename='img/homebg.jpg') }}" alt="Project 2" class="project-image">
+            <h3 class="project-title">Project Two</h3>
+            <p class="project-description">Description of the second project goes here. Briefly explain what it is about.</p>
+          </div>
+        </div>
+        <div class="col-md-4 project">
+          <div class="project-content">
+            <img src="{{ url_for('static', filename='img/homebg.jpg') }}" alt="Project 3" class="project-image">
+            <h3 class="project-title">Project Three</h3>
+            <p class="project-description">Description of the third project goes here. Briefly explain what it is about.</p>
+          </div>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About -->
+  <section id="About">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="{{ url_for('static', filename='img/JatinPic.png') }}" alt="About Me" class="about-image">
+        </div>
+        <div class="col-md-8">
+          <h3>Hi, I'm Jatin Sharma</h3>
+	  <p>I am a passionate programmer, developer, and designer with a keen interest in creating innovative solutions to solve the real industry problems. With a background in Aritficial Intelligence and data science, I enjoy exploring new tools and technologies and working on exciting projects. I am very passionate for use the Generative Ai models.<br> Let's connect and build something amazing!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="Contact">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p>If you have any questions or want to discuss potential opportunities, feel free to reach out to me via email or connect with me on social media.</p>
+      <ul class="contact-info">
+        <li><i class="fa fa-envelope"></i>
+        <a href="jatin.sharma7281@gmail.com">    jatin.sharma7281@example.com</a></li>
+        <li><i class="fa fa-phone"></i>    +91 9511548005</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer style="background-color: #3d3d3d; color: white; height: 30px">
+    <p>&copy; 2024 Jatin Sharma. All rights reserved.</p>
+    
+  </footer>
+
+  <!-- JavaScript for Typed.js and Theme Toggle -->
+  <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+  
+ 
+</body>
+</html>

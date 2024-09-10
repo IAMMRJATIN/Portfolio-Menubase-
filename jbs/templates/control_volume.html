@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Laptop Volume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            color: #555;
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            display: block;
+            padding: 10px;
+            align-content: center;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Control Laptop Volume</h1>
+    <div class="container">
+        <img src="{{ url_for('static', filename='img/volume_control.avif') }}" alt="Scrape Google" class="logo">
+
+
+        <form action="{{ url_for('control_volume') }}" method="post">
+            <label for="volume">Set Volume (0-100):</label>
+            <input type="number" id="volume" name="volume" min="0" max="100" placeholder="Enter volume level" required>
+            
+            <button type="submit">Set Volume</button>
+        </form>
+        <a class="back-link" href="{{ url_for('index1') }}">Back to Home</a>
+    </div>
+</body>
+</html>

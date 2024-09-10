@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coming Soon - My Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #232323;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 4rem;
+            color: #078bff;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #d0dff6;
+        }
+        .subscribe {
+            margin-top: 20px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            width: 250px;
+            font-size: 1rem;
+            border-radius: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #85c6ff;
+            color: #0f0f2090;
+            border-radius: 15px;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0c0c0c;
+        }
+
+        #backButton {
+        position: fixed; /* Fixed position to stay at the top-left corner */
+        top: 10px;       /* Distance from the top of the page */
+        left: 10px;      /* Distance from the left edge of the page */
+        padding: 8px 10px;
+        background-color: #4599f3c8; /* Button color */
+        color: white;           /* Text color */
+        border: none;           /* No border */
+        cursor: pointer;        /* Pointer cursor on hover */
+        font-size: 14px;        /* Font size */
+        z-index: 1000;          /* Ensures it's on top of other elements */
+        border-radius: 30px;
+    }
+
+    #backButton:hover {
+        background-color: #555; /* Darker shade on hover */
+    }
+    </style>
+</head>
+<body>
+    <button id="backButton" onclick="goBack()">Go Back</button>
+
+
+
+    <div class="container">
+        <h1>Coming Soon!</h1>
+        <p>Our awesome new services are on the way. Stay tuned!</p>
+        <form action="/subscribe" method="POST" class="subscribe">
+            <input type="email" name="email" placeholder="Enter your email for updates" required>
+            <input type="submit" value="Notify Me">
+        </form>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #232323;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #0f0f2090;
+    color: #eaeaea;
+    padding-left: 20px;
+    border-radius: 8px;
+    box-shadow: 1PX 6px 10px rgba(248, 58, 58, 0.489);
+    width: 380px;
+    height: 350px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #61c7bb; /* WhatsApp green color */
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+    background-color: rgba(255, 255, 255, 0.112);
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #2673ca;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+
+button {
+    background-color: #193222; /* WhatsApp green button color */
+    color: rgb(219, 255, 255);
+    border: 2px solid #346b3a; /* Border color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px; /* Border radius for rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s; /* Added transition for border color */
+}
+
+button:hover {
+    background-color: #182e19;
+    border-color: #e6e261c4; /* Change border color on hover */
+}
